@@ -112,10 +112,6 @@
   margin-bottom: 24px;
 }
 
-.card_block:not(:last-of-type) {
-  margin-bottom: 24px;
-}
-
 .card_price_amount {
   font-size: 40px;
   color: #212529;
@@ -133,9 +129,9 @@
   margin-bottom: 24px;
 }
 
-/* .card_description_item:not(:last-of-type) {
+.card_description_item:not(:last-of-type) {
   margin-bottom: 12px;
-} */
+}
 
 .card_button {
   display: block;
