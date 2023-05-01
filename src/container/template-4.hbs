@@ -1,0 +1,63 @@
+{{! 
+Це код container файлу для index сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+ }}
+
+
+{{!-- Navigation Header--}}
+<div class='page'>
+  <div class='page_content'>
+    <header class="page_block">
+      <div class='header'>
+       <div class="logo">
+         {{> logo}}
+       </div>
+        <nav class='header_nav'>
+          <div class="header_nav_right">
+            {{>nav list=header}}
+          </div>
+        </nav>
+      </div>
+      {{> divider}}
+    </header>
+
+
+{{!-- Main content Hero --}}
+    <section class="page_block">
+        <div class="hero">
+        </div>
+    </section>
+
+{{!-- Main Content Flexbox --}}
+    <section class="page_block">
+      <div class="flex_container">
+      </div>
+    </section>
+
+    <section class="page_block">
+        <div class="forms">
+        </div>
+    </section>
+
+    <footer class="page_block">
+      {{> divider}}
+    <div class="footer">
+      <div class="logo">
+        {{> logo}}
+        <span class="footer_copyright">Copyright 2023-2024</span>
+      </div>
+      {{#each footer}}
+      <div class="footer_columns">
+          <span class="footer_title">{{title}}</span>
+          {{>nav list=links isVertical=true}}
+      </div>
+      {{/each}}
+    </div>
+    </footer>
+  </div>
+</div>
+
+{{! 
+    Цей код містить лише те, що буде виводитись в <body>
+    Адже наш layout/default.hbs має вже структуру HTML
+}}
