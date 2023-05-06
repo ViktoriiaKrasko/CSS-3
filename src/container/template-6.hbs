@@ -1,0 +1,96 @@
+{{!
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+
+
+<header class='header'>
+  <div class="header_logo">
+    {{> logo}}
+  </div>
+  <nav class='header_nav'>
+    <div class="header_nav_right">
+      {{>nav list=header}}
+    </div>
+  </nav>
+</header>
+
+<main class="main">
+  {{#with info}}
+  <div class="info">
+    <h1 class="info_title">{{title}}</h1>
+    <p class="info_description">{{description}}</p>
+  </div>
+  {{/with}}
+
+  {{#with form}}
+  <form class="form">
+    <div class="form_input_list">
+      {{#each inputs}}
+      <input type="{{type}}" class="form_input" placeholder="{{placeholder}}" name="{{name}}" id="form_input_{{id}}">
+      {{/each}}
+    </div>
+    <div class="form_checkbox">
+      <input type="checkbox" name="{{checkbox.name}}" id="{{checkbox.name}}">
+      <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+    </div>
+    <button type="submit" class="form_button">{{button}}</button>
+    <p class="form_info">{{info}}</p>
+  </form>
+  {{/with}}
+</main>
+
+{{#with updates}}
+<section class="updates">
+  <h2 class="updates_title">{{title}}</h2>
+  {{#each list}}
+  <div class="updates_list">
+    <div class="updates_picture">32x32</div>
+    <strong class="updates_nickname">
+      {{nickname}}
+    </strong>
+    <p class="updates_description">{{description}}</p>
+  </div>
+  {{/each}}
+  <a href="{{show_all.url}}" class="updates_link">{{show_all.text}}</a>
+</section>
+{{/with}}
+
+{{#with experience}}
+<section class="experience">
+  <div class="experience_title">{{title}}</div>
+  <div class="experience_badge">{{badge}}</div>
+  <div class="experience_container">
+    {{#each list}}
+    <div class="experience_list">
+      <h3 class="experience_name">{{name}}</h3>
+      <p class="experience_details">{{details}}</p>
+    </div>
+    {{/each}}
+  </div>
+</section>
+{{/with}}
+
+
+
+<footer class="footer">
+  <div class="footer_logo">
+    {{> logo}}
+    <span class="footer_copyright">Copyright 2023-2024</span>
+  </div>
+  {{#each footer}}
+  <div class="footer_links">
+    <span class="footer_title">{{title}}</span>
+    {{>nav list=links isVertical=true}}
+  </div>
+  {{/each}}
+</footer>
+
+
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+  Адже наш layout/default.hbs має вже структуру HTML
+  }}
