@@ -565,7 +565,7 @@ router.get('/template-4', function (req, res) {
 
     main: {
       heading: 'Oh yeah, it’s that good. See for yourself.',
-      descriotion:
+      description:
         'Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.',
       image: 'https://picsum.photos/500/500',
       button: 'View details',
@@ -575,21 +575,21 @@ router.get('/template-4', function (req, res) {
     featured: [
       {
         heading: 'Featured title',
-        info: "Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.",
+        info: 'Paragraph of text beneath the heading to explain the heading. We`ll add onto it with another sentence and probably just keep going until we run out of words.',
         linkText: 'Call to action',
         linkUrl: 'https://example.com/',
         photo: 'https://picsum.photos/64/64',
       },
       {
         heading: 'Featured title',
-        info: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        info: 'Paragraph of text beneath the heading to explain the heading. We`ll add onto it with another sentence and probably just keep going until we run out of words.',
         linkText: 'Call to action',
         linkUrl: 'https://example.com/',
         photo: 'https://picsum.photos/64/64',
       },
       {
         heading: 'Featured title',
-        info: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        info: 'Paragraph of text beneath the heading to explain the heading. We`ll add onto it with another sentence and probably just keep going until we run out of words.',
         linkText: 'Call to action',
         linkUrl: 'https://example.com/',
         photo: 'https://picsum.photos/64/64',
