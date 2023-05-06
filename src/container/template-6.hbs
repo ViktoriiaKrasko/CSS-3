@@ -44,22 +44,26 @@
 {{#with updates}}
 <section class="updates">
   <h2 class="updates_title">{{title}}</h2>
-  {{#each list}}
-  <div class="updates_list">
-    <div class="updates_picture">32x32</div>
-    <strong class="updates_nickname">
-      {{nickname}}
-    </strong>
-    <p class="updates_description">{{description}}</p>
+  <div class="updates_container">
+    {{#each list}}
+    <div class="updates_list">
+      <div class="updates_picture">32x32</div>
+      <div class="updates_item">
+        <strong class="updates_nickname">
+          {{nickname}}
+        </strong>
+        <p class="updates_description">{{description}}</p>
+      </div>
+    </div>
+    {{/each}}
   </div>
-  {{/each}}
   <a href="{{show_all.url}}" class="updates_link">{{show_all.text}}</a>
 </section>
 {{/with}}
 
 {{#with experience}}
 <section class="experience">
-  <div class="experience_title">{{title}}</div>
+  <h2 class="experience_title">{{title}}</h2>
   <div class="experience_badge">{{badge}}</div>
   <div class="experience_container">
     {{#each list}}
