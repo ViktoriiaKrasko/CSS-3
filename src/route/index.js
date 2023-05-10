@@ -918,7 +918,7 @@ router.get('/template-6', function (req, res) {
         url: 'https://example.com/updates',
       },
     },
-    expirience: {
+    experience: {
       title: 'We have a lot of experience',
       badge: 'hot!',
       list: [
