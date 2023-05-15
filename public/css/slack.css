@@ -163,7 +163,7 @@ body {
   .brands {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     column-gap: var(--space-xxl);
     row-gap: var(--space-m);
     flex-wrap: wrap;
@@ -198,7 +198,10 @@ body {
     padding-top: 130px;
     padding-bottom: 140px;
     display: grid;
-    gap: var(--space-ml);
+    gap: var(--space-l);
+    background-image: url('/Img/puzzle.png');
+    background-repeat: no-repeat;
+    background-position: top right;
   }
 
   .page_background {
@@ -207,11 +210,13 @@ body {
 
   .features_title {
     font-size: calc(var(--size-m) + 10px);
+    z-index: 1;
   }
 
   .features_info {
     font-size: var(--size-s);
     max-width: 520px;
+    z-index: 1;
   }
 
   .features_card {
@@ -238,15 +243,6 @@ body {
   .features_grid_4 > .features_card:first-of-type {
     grid-row: 1/3;
   }
-
-  .image {
-    position: absolute;
-    top: 0;
-    right: 210px;
-    z-index: 0;
-    width: 500px;
-    height: 377.95px;
-  }
 }
 
 @layer adaptive {
@@ -260,6 +256,10 @@ body {
     .page_content {
       max-width: var(--page-width-medium);
     }
+    .hero_image {
+      left: 518px;
+      height: 300px;
+    }
   }
 
   @media all and (width < 1000px) {
@@ -269,7 +269,41 @@ body {
 
     .hero_image {
       position: static;
+      width: 100%;
       order: -1;
+    }
+
+    .hero_content {
+      max-width: 100%;
+    }
+
+    .features_grid_4 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .features_grid_4 > .features_card:first-of-type {
+      grid-row: 1/3;
+    }
+
+    .features_section {
+      background-image: none;
+    }
+  }
+
+  @media all and (width < 600px) {
+    .features_grid_4 {
+      grid-template-columns: 2fr 2fr;
+    }
+  }
+
+  @media all and (width < 400px) {
+    .features_grid_4 {
+      grid-template-columns: 1fr;
+    }
+
+    .hero_buttons {
+      grid-template-columns: 1fr;
+      gap: var(--space-s);
     }
   }
 }
